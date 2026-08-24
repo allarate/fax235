@@ -202,6 +202,46 @@ st.markdown(
         padding: 0.35rem 0 !important;
         min-height: 2.4rem !important;
     }
+    div[class*="st-key-reply_actions_row"] [data-testid="stHorizontalBlock"],
+    div[class*="st-key-comment_actions_row"] [data-testid="stHorizontalBlock"] {
+        justify-content: flex-start !important;
+        gap: 0.5rem !important;
+    }
+    div[class*="st-key-reply_actions_row"] [data-testid="stColumn"],
+    div[class*="st-key-comment_actions_row"] [data-testid="stColumn"] {
+        width: auto !important;
+        flex: 0 0 auto !important;
+        min-width: 0 !important;
+    }
+    div[class*="st-key-reply_upload_compact"] [data-testid="stFileUploaderDropzoneInstructions"],
+    div[class*="st-key-comment_upload_compact"] [data-testid="stFileUploaderDropzoneInstructions"],
+    div[class*="st-key-reply_upload_compact"] [data-testid="stWidgetLabel"],
+    div[class*="st-key-comment_upload_compact"] [data-testid="stWidgetLabel"] {
+        display: none !important;
+    }
+    div[class*="st-key-reply_upload_compact"] [data-testid="stFileUploaderDropzone"],
+    div[class*="st-key-comment_upload_compact"] [data-testid="stFileUploaderDropzone"] {
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        min-height: 0 !important;
+        justify-content: flex-start !important;
+    }
+    div[class*="st-key-reply_upload_compact"] [data-testid="stBaseButton-secondary"],
+    div[class*="st-key-comment_upload_compact"] [data-testid="stBaseButton-secondary"] {
+        background-color: #7A1F2B !important;
+        color: #FFFFFF !important;
+        border: 1px solid #7A1F2B !important;
+    }
+    div[class*="st-key-reply_upload_compact"] [data-testid="stBaseButton-secondary"] span[data-testid="stIconMaterial"],
+    div[class*="st-key-comment_upload_compact"] [data-testid="stBaseButton-secondary"] span[data-testid="stIconMaterial"] {
+        color: #FFFFFF !important;
+    }
+    div[class*="st-key-reply_upload_compact"] [data-testid="stBaseButton-secondary"]:hover,
+    div[class*="st-key-comment_upload_compact"] [data-testid="stBaseButton-secondary"]:hover {
+        background-color: #5E1721 !important;
+        border-color: #5E1721 !important;
+    }
     div[class*="st-key-site_footer"] {
         bottom: 0;
         min-height: 72px;

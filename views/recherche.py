@@ -129,38 +129,51 @@ def render_comment(conn, comment, by_parent: dict, sujet_id: int, depth: int = 0
         render_reactions(conn, "commentaire", comment["id"], key_prefix=f"cmt_{comment['id']}")
 
         reply_open_key = f"reply_open_{comment['id']}"
+        reply_file_gen_key = f"reply_file_gen_{comment['id']}"
+        if reply_file_gen_key not in st.session_state:
+            st.session_state[reply_file_gen_key] = 0
+
         if st.session_state.user:
-            if st.button("Répondre", key=f"reply_btn_{comment['id']}"):
-                st.session_state[reply_open_key] = not st.session_state.get(reply_open_key, False)
+            with st.container(key=f"reply_actions_row_{comment['id']}"):
+                reply_btn_col, reply_upload_col = st.columns([1, 1], gap="small")
+                with reply_btn_col:
+                    if st.button("Répondre", key=f"reply_btn_{comment['id']}"):
+                        st.session_state[reply_open_key] = not st.session_state.get(reply_open_key, False)
+                with reply_upload_col:
+                    with st.container(key=f"reply_upload_compact_{comment['id']}"):
+                        quick_file = st.file_uploader(
+                            "Joindre un fichier",
+                            type=["pdf", "jpg", "jpeg", "png"],
+                            key=f"reply_quick_file_{comment['id']}_{st.session_state[reply_file_gen_key]}",
+                            label_visibility="collapsed",
+                        )
+                if quick_file is not None:
+                    with st.spinner("Envoi du fichier..."):
+                        file_url = storage.upload_file(quick_file.getvalue(), quick_file.name)
+                    conn.execute(
+                        "INSERT INTO commentaires (sujet_id, user_id, message, parent_id, fichier) VALUES (?, ?, ?, ?, ?)",
+                        (sujet_id, st.session_state.user["id"], "", comment["id"], file_url),
+                    )
+                    conn.commit()
+                    st.session_state[reply_file_gen_key] += 1
+                    st.rerun()
 
         if st.session_state.get(reply_open_key, False):
             with st.form(key=f"reply_form_{comment['id']}", clear_on_submit=True):
-                reply_msg_col, reply_file_col = st.columns([2, 1])
-                with reply_msg_col:
-                    reply_msg = st.text_area(
-                        "Réponse", key=f"reply_msg_{comment['id']}", label_visibility="collapsed", placeholder="Votre réponse..."
-                    )
-                with reply_file_col:
-                    reply_file = st.file_uploader(
-                        "Fichier (optionnel)",
-                        type=["pdf", "jpg", "jpeg", "png"],
-                        key=f"reply_file_{comment['id']}",
-                    )
+                reply_msg = st.text_area(
+                    "Réponse", key=f"reply_msg_{comment['id']}", label_visibility="collapsed", placeholder="Votre réponse..."
+                )
                 if st.form_submit_button("Envoyer"):
-                    if reply_msg.strip() or reply_file is not None:
-                        file_url = None
-                        if reply_file is not None:
-                            with st.spinner("Envoi du fichier..."):
-                                file_url = storage.upload_file(reply_file.getvalue(), reply_file.name)
+                    if reply_msg.strip():
                         conn.execute(
-                            "INSERT INTO commentaires (sujet_id, user_id, message, parent_id, fichier) VALUES (?, ?, ?, ?, ?)",
-                            (sujet_id, st.session_state.user["id"], reply_msg.strip(), comment["id"], file_url),
+                            "INSERT INTO commentaires (sujet_id, user_id, message, parent_id, fichier) VALUES (?, ?, ?, ?, NULL)",
+                            (sujet_id, st.session_state.user["id"], reply_msg.strip(), comment["id"]),
                         )
                         conn.commit()
                         st.session_state[reply_open_key] = False
                         st.rerun()
                     else:
-                        st.error("Ajoutez un message ou un fichier.")
+                        st.error("La réponse ne peut pas être vide.")
 
     for child in by_parent.get(comment["id"], []):
         render_comment(conn, child, by_parent, sujet_id, depth + 1)
@@ -281,30 +294,49 @@ with col_mid:
 
                 if st.session_state.user:
                     st.markdown("**Ajouter un commentaire**")
-                    with st.form(key=f"comment_form_{s['id']}", clear_on_submit=True):
-                        msg_col, file_col = st.columns([2, 1])
-                        with msg_col:
-                            msg = st.text_area("Ajouter un commentaire", key=f"msg_{s['id']}", label_visibility="collapsed", placeholder="Votre commentaire...")
-                        with file_col:
-                            comment_file = st.file_uploader(
-                                "Fichier (optionnel)",
-                                type=["pdf", "jpg", "jpeg", "png"],
-                                key=f"comment_file_{s['id']}",
-                            )
-                        submitted = st.form_submit_button("Envoyer")
-                        if submitted:
-                            if msg.strip() or comment_file is not None:
-                                file_url = None
-                                if comment_file is not None:
-                                    with st.spinner("Envoi du fichier..."):
-                                        file_url = storage.upload_file(comment_file.getvalue(), comment_file.name)
-                                conn.execute(
-                                    "INSERT INTO commentaires (sujet_id, user_id, message, parent_id, fichier) VALUES (?, ?, ?, NULL, ?)",
-                                    (s["id"], st.session_state.user["id"], msg.strip(), file_url),
+
+                    comment_open_key = f"comment_open_{s['id']}"
+                    comment_file_gen_key = f"comment_file_gen_{s['id']}"
+                    if comment_file_gen_key not in st.session_state:
+                        st.session_state[comment_file_gen_key] = 0
+
+                    with st.container(key=f"comment_actions_row_{s['id']}"):
+                        comment_btn_col, comment_upload_col = st.columns([1, 1], gap="small")
+                        with comment_btn_col:
+                            if st.button("Commenter", key=f"comment_btn_{s['id']}"):
+                                st.session_state[comment_open_key] = not st.session_state.get(comment_open_key, False)
+                        with comment_upload_col:
+                            with st.container(key=f"comment_upload_compact_{s['id']}"):
+                                quick_file = st.file_uploader(
+                                    "Joindre un fichier",
+                                    type=["pdf", "jpg", "jpeg", "png"],
+                                    key=f"comment_quick_file_{s['id']}_{st.session_state[comment_file_gen_key]}",
+                                    label_visibility="collapsed",
                                 )
-                                conn.commit()
-                                st.rerun()
-                            else:
-                                st.error("Ajoutez un message ou un fichier.")
+                        if quick_file is not None:
+                            with st.spinner("Envoi du fichier..."):
+                                file_url = storage.upload_file(quick_file.getvalue(), quick_file.name)
+                            conn.execute(
+                                "INSERT INTO commentaires (sujet_id, user_id, message, parent_id, fichier) VALUES (?, ?, ?, NULL, ?)",
+                                (s["id"], st.session_state.user["id"], "", file_url),
+                            )
+                            conn.commit()
+                            st.session_state[comment_file_gen_key] += 1
+                            st.rerun()
+
+                    if st.session_state.get(comment_open_key, False):
+                        with st.form(key=f"comment_form_{s['id']}", clear_on_submit=True):
+                            msg = st.text_area("Ajouter un commentaire", key=f"msg_{s['id']}", label_visibility="collapsed", placeholder="Votre commentaire...")
+                            if st.form_submit_button("Envoyer"):
+                                if msg.strip():
+                                    conn.execute(
+                                        "INSERT INTO commentaires (sujet_id, user_id, message, parent_id, fichier) VALUES (?, ?, ?, NULL, NULL)",
+                                        (s["id"], st.session_state.user["id"], msg.strip()),
+                                    )
+                                    conn.commit()
+                                    st.session_state[comment_open_key] = False
+                                    st.rerun()
+                                else:
+                                    st.error("Le commentaire ne peut pas être vide.")
                 else:
                     st.caption("Connectez-vous pour laisser un commentaire.")
