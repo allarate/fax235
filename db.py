@@ -78,6 +78,7 @@ def get_connection():
     return conn
 
 
+@st.cache_resource
 def init_db():
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
     conn = get_connection()
@@ -136,18 +137,23 @@ def init_db():
     )
     conn.commit()
 
-    columns = [row["name"] for row in conn.execute("PRAGMA table_info(users)").fetchall()]
-    if "photo" not in columns:
-        conn.execute("ALTER TABLE users ADD COLUMN photo TEXT")
-        conn.commit()
+    try:
+        columns = [row["name"] for row in conn.execute("PRAGMA table_info(users)").fetchall()]
+        if "photo" not in columns:
+            conn.execute("ALTER TABLE users ADD COLUMN photo TEXT")
+            conn.commit()
 
-    comment_columns = [row["name"] for row in conn.execute("PRAGMA table_info(commentaires)").fetchall()]
-    if "parent_id" not in comment_columns:
-        conn.execute("ALTER TABLE commentaires ADD COLUMN parent_id INTEGER REFERENCES commentaires(id) ON DELETE CASCADE")
-        conn.commit()
-    if "fichier" not in comment_columns:
-        conn.execute("ALTER TABLE commentaires ADD COLUMN fichier TEXT")
-        conn.commit()
+        comment_columns = [row["name"] for row in conn.execute("PRAGMA table_info(commentaires)").fetchall()]
+        if "parent_id" not in comment_columns:
+            conn.execute("ALTER TABLE commentaires ADD COLUMN parent_id INTEGER REFERENCES commentaires(id) ON DELETE CASCADE")
+            conn.commit()
+        if "fichier" not in comment_columns:
+            conn.execute("ALTER TABLE commentaires ADD COLUMN fichier TEXT")
+            conn.commit()
+    except Exception:
+        # Migrations déjà appliquées lors d'un déploiement précédent : une erreur ici
+        # (ex. PRAGMA indisponible ponctuellement côté Turso) ne doit pas bloquer le démarrage.
+        pass
 
     admin_exists = conn.execute(
         "SELECT 1 FROM users WHERE role = 'admin' LIMIT 1"
