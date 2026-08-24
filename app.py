@@ -349,6 +349,13 @@ if st.session_state.user is None:
         ).fetchone()
         if session_row:
             st.session_state.user = dict(session_row)
+            st.session_state.session_token = token
+
+# La navigation via st.page_link réinitialise la query string : on remet le jeton
+# dans l'URL à chaque run pour qu'une actualisation ultérieure reste connectée.
+if st.session_state.user is not None and st.session_state.get("session_token"):
+    if st.query_params.get("token") != st.session_state.session_token:
+        st.query_params["token"] = st.session_state.session_token
 
 login_page = st.Page("views/login.py", title="Connexion")
 
@@ -511,12 +518,13 @@ else:
                         st.write(f"**{u['firstname']} {u['lastname']}**")
 
                 if st.button("Se déconnecter"):
-                    token = st.query_params.get("token")
+                    token = st.session_state.get("session_token") or st.query_params.get("token")
                     if token:
                         db.get_connection().execute("DELETE FROM sessions WHERE token = ?", (token,))
                         db.get_connection().commit()
                     st.query_params.clear()
                     st.session_state.user = None
+                    st.session_state.pop("session_token", None)
                     st.session_state.force_login_redirect = True
                     st.rerun()
     st.divider()
