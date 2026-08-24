@@ -440,6 +440,9 @@ else:
                 position: static !important;
                 min-height: 0 !important;
             }
+            div[class*="st-key-site_footer"] {
+                padding: 1.75rem 1rem !important;
+            }
             section[data-testid="stMain"] .stMainBlockContainer {
                 padding-top: 1.5rem !important;
                 padding-bottom: 2rem !important;
