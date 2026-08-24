@@ -1,14 +1,32 @@
 """Fax235 — plateforme d'entraide étudiante (Streamlit)."""
 
 import base64
+import time
 
 import streamlit as st
+from streamlit_cookies_controller import CookieController
 
 import db
 import storage
 
 st.set_page_config(page_title="Fax235", layout="wide")
 db.init_db()
+
+cookie_controller = CookieController()
+
+if st.session_state.get("pending_cookie_token"):
+    cookie_controller.set(
+        "fax235_session",
+        st.session_state.pop("pending_cookie_token"),
+        max_age=30 * 24 * 3600,
+    )
+
+if st.session_state.get("pending_cookie_removal"):
+    cookie_controller.remove("fax235_session")
+    st.session_state.pop("pending_cookie_removal")
+    # Laisse le composant transmettre la suppression au navigateur avant
+    # qu'un st.switch_page / st.rerun ultérieur dans ce même run ne l'interrompe.
+    time.sleep(0.2)
 
 st.markdown(
     """
@@ -341,21 +359,15 @@ if "user" not in st.session_state:
     st.session_state.user = None
 
 if st.session_state.user is None:
-    token = st.query_params.get("token")
-    if token:
+    cookie_token = cookie_controller.get("fax235_session")
+    if cookie_token:
         session_row = db.get_connection().execute(
             "SELECT u.* FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.token = ?",
-            (token,),
+            (cookie_token,),
         ).fetchone()
         if session_row:
             st.session_state.user = dict(session_row)
-            st.session_state.session_token = token
-
-# La navigation via st.page_link réinitialise la query string : on remet le jeton
-# dans l'URL à chaque run pour qu'une actualisation ultérieure reste connectée.
-if st.session_state.user is not None and st.session_state.get("session_token"):
-    if st.query_params.get("token") != st.session_state.session_token:
-        st.query_params["token"] = st.session_state.session_token
+            st.session_state.session_token = cookie_token
 
 login_page = st.Page("views/login.py", title="Connexion")
 
@@ -518,11 +530,11 @@ else:
                         st.write(f"**{u['firstname']} {u['lastname']}**")
 
                 if st.button("Se déconnecter"):
-                    token = st.session_state.get("session_token") or st.query_params.get("token")
+                    token = st.session_state.get("session_token")
                     if token:
                         db.get_connection().execute("DELETE FROM sessions WHERE token = ?", (token,))
                         db.get_connection().commit()
-                    st.query_params.clear()
+                    st.session_state.pending_cookie_removal = True
                     st.session_state.user = None
                     st.session_state.pop("session_token", None)
                     st.session_state.force_login_redirect = True

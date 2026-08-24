@@ -34,7 +34,7 @@ with st.container(key="auth_card"):
                 conn.commit()
                 st.session_state.user = dict(user)
                 st.session_state.session_token = token
-                st.query_params["token"] = token
+                st.session_state.pending_cookie_token = token
                 st.rerun()
             else:
                 st.error("Matricule ou mot de passe incorrect.")
