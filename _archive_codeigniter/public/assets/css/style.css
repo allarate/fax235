@@ -1,0 +1,78 @@
+/* Background avec le logo */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../images/bifi2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;   /* Taille du logo contrôlée */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Fond semi-transparent */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    color: #fff;
+    width: 300px;
+}
+
+/* Titres */
+.overlay h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Champs du formulaire */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* Bouton */
+button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Lien */
+.overlay a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+.overlay a:hover {
+    text-decoration: underline;
+}
+
+/* Messages d'erreur */
+.error {
+    background: #e74c3c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}

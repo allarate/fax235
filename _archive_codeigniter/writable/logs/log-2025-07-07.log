@@ -1,0 +1,682 @@
+CRITICAL - 2025-07-07 11:47:24 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:47:27 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:50:27 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:51:05 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:51:27 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:51:33 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:51:39 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:52:30 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:52:34 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:55:30 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:55:31 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:57:58 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:59:30 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:59:31 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:59:31 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:59:32 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 11:59:32 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 12:00:08 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 12:00:57 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 12:02:25 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 12:23:10 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 12:25:47 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(138): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 12:29:27 --> ErrorException: Undefined variable $data
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Controllers/Auth.php on line 174.
+ 1 APPPATH/Controllers/Auth.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/opt/lampp/htdocs/bifi/app/Controllers/Auth.php', 174)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 20:25:18 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(119): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 20:26:53 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(119): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 20:48:51 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(119): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 20:54:57 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(119): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 20:55:03 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(119): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:04:04 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(119): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:04:08 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(119): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:05:15 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/bac]
+in APPPATH/Views/bac.php on line 58.
+ 1 APPPATH/Views/bac.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/bac.php', 58)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/bac.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('bac', [], true)
+ 5 APPPATH/Controllers/Auth.php(119): view('bac', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->bac()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:46:47 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(188): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:49:40 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(188): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:50:47 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(189): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:51:24 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(189): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:54:57 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(187): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:55:53 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(187): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:56:35 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(187): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:56:36 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(187): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:57:49 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(187): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 21:59:25 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(189): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 22:00:22 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(189): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 22:00:31 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(189): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 22:05:43 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(188): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 22:05:44 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(188): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 22:05:45 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(188): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 22:09:30 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(188): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 22:13:25 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 9.
+ 1 APPPATH/Views/discussion.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 9)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(188): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-07 22:17:38 --> ErrorException: Undefined array key "contenu"
+[Method: GET, Route: auth/envoyer_message]
+in APPPATH/Views/discussion.php on line 10.
+ 1 APPPATH/Views/discussion.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contenu"', '/opt/lampp/htdocs/bifi/app/Views/discussion.php', 10)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/discussion.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('discussion', [], true)
+ 5 APPPATH/Controllers/Auth.php(188): view('discussion', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->envoyer_message()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

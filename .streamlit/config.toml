@@ -1,0 +1,19 @@
+[server]
+maxUploadSize = 10
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#7A1F2B"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F5F1EE"
+textColor = "#221D1D"
+borderColor = "#E6DFDA"
+linkColor = "#7A1F2B"
+baseRadius = "medium"
+buttonRadius = "medium"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+headingFont = "Outfit:https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&display=swap"
+headingFontWeights = [650, 600, 600, 600, 500, 500]

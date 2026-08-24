@@ -1,0 +1,26 @@
+CRITICAL - 2025-07-26 10:27:58 --> ErrorException: Cannot redeclare App\Controllers\Auth::rechercher_univ_abeche()
+[Method: GET, Route: auth/Ajouter_Filiere]
+in APPPATH/Controllers/Auth.php on line 505.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-26 10:28:02 --> ErrorException: Cannot redeclare App\Controllers\Auth::rechercher_univ_abeche()
+[Method: GET, Route: auth/orientation]
+in APPPATH/Controllers/Auth.php on line 505.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-26 10:28:44 --> ErrorException: Cannot redeclare App\Controllers\Auth::rechercher_univ_abeche()
+[Method: POST, Route: auth/rechercher_univ_abeche]
+in APPPATH/Controllers/Auth.php on line 504.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-26 12:14:27 --> ErrorException: Undefined variable $etudiant
+[Method: GET, Route: inscription/afficher_inscription_page]
+in APPPATH/Views/Afficher_inscription.php on line 23.
+ 1 APPPATH/Views/Afficher_inscription.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $etudiant', '/opt/lampp/htdocs/bifi/app/Views/Afficher_inscription.php', 23)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/bifi/app/Views/Afficher_inscription.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('Afficher_inscription', [], true)
+ 5 APPPATH/Controllers/Inscription.php(42): view('Afficher_inscription')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Inscription->afficher_inscription_page()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inscription))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
