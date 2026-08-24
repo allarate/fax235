@@ -227,6 +227,15 @@ st.markdown(
         min-height: 0 !important;
         justify-content: flex-start !important;
     }
+    div[class*="st-key-reply_upload_compact"] [data-testid="stBaseButton-secondary"] [data-testid="stMarkdownContainer"] p,
+    div[class*="st-key-comment_upload_compact"] [data-testid="stBaseButton-secondary"] [data-testid="stMarkdownContainer"] p {
+        font-size: 0 !important;
+    }
+    div[class*="st-key-reply_upload_compact"] [data-testid="stBaseButton-secondary"] [data-testid="stMarkdownContainer"] p::after,
+    div[class*="st-key-comment_upload_compact"] [data-testid="stBaseButton-secondary"] [data-testid="stMarkdownContainer"] p::after {
+        content: "Upload un fichier";
+        font-size: 1rem;
+    }
     div[class*="st-key-reply_upload_compact"] [data-testid="stBaseButton-secondary"],
     div[class*="st-key-comment_upload_compact"] [data-testid="stBaseButton-secondary"] {
         background-color: #7A1F2B !important;
