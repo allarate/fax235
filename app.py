@@ -220,10 +220,6 @@ st.markdown(
         text-align: center;
         width: 100%;
     }
-    section[data-testid="stMain"] .stMainBlockContainer {
-        padding-top: 13rem;
-        padding-bottom: 5rem;
-    }
     div[class*="st-key-auth_card"] {
         min-height: 15vh;
         display: flex;
@@ -332,6 +328,54 @@ else:
         <style>
         [data-testid="stHeader"] {
             background-color: #F5F1EE;
+        }
+        section[data-testid="stMain"] .stMainBlockContainer {
+            padding-top: 13rem;
+            padding-bottom: 5rem;
+        }
+        @media (max-width: 640px) {
+            div[class*="st-key-site_header"], div[class*="st-key-site_footer"] {
+                position: static !important;
+                min-height: 0 !important;
+            }
+            section[data-testid="stMain"] .stMainBlockContainer {
+                padding-top: 1.5rem !important;
+                padding-bottom: 2rem !important;
+            }
+            div[class*="st-key-header_left"] [data-testid="stHorizontalBlock"],
+            div[class*="st-key-header_right"] [data-testid="stHorizontalBlock"] {
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                row-gap: 0.5rem !important;
+            }
+            div[class*="st-key-header_right"] [data-testid="stColumn"] {
+                width: auto !important;
+                max-width: max-content !important;
+                flex: 0 1 auto !important;
+            }
+            div[class*="st-key-header_right"] {
+                align-items: flex-start !important;
+            }
+            div[class*="st-key-header_left"] [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(-n+2) {
+                width: auto !important;
+                max-width: max-content !important;
+                flex: 0 0 auto !important;
+            }
+            div[class*="st-key-header_left"] [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(n+3) {
+                flex: 1 1 46% !important;
+                max-width: 48% !important;
+                width: auto !important;
+                min-width: 0 !important;
+            }
+            div[class*="st-key-header_left"] [data-testid="stPageLink"] {
+                padding: 0.4rem 0.5rem !important;
+                justify-content: center !important;
+            }
+            div[class*="st-key-header_left"] [data-testid="stPageLink"] p {
+                white-space: normal !important;
+                text-align: center;
+                font-size: 0.78rem !important;
+            }
         }
         </style>
         """,
