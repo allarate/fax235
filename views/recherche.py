@@ -108,7 +108,23 @@ def render_comment(conn, comment, by_parent: dict, sujet_id: int, depth: int = 0
 
     with st.container(key=block_key):
         st.markdown(f"**{comment['firstname']} {comment['lastname']}**")
-        st.write(comment["message"])
+        if comment["message"]:
+            st.write(comment["message"])
+
+        if comment["fichier"]:
+            file_ref = comment["fichier"]
+            ext = storage.extension_of(file_ref)
+            if ext in IMAGE_EXTENSIONS:
+                st.image(file_ref, width=200)
+            else:
+                file_bytes = storage.fetch_bytes(file_ref)
+                download_name = file_ref.split("?", 1)[0].rsplit("/", 1)[-1]
+                st.download_button(
+                    "Télécharger la pièce jointe",
+                    file_bytes,
+                    file_name=download_name,
+                    key=f"cmt_dl_{comment['id']}",
+                )
 
         render_reactions(conn, "commentaire", comment["id"], key_prefix=f"cmt_{comment['id']}")
 
@@ -122,17 +138,26 @@ def render_comment(conn, comment, by_parent: dict, sujet_id: int, depth: int = 0
                 reply_msg = st.text_area(
                     "Réponse", key=f"reply_msg_{comment['id']}", label_visibility="collapsed", placeholder="Votre réponse..."
                 )
+                reply_file = st.file_uploader(
+                    "Fichier (PDF, JPG ou PNG — optionnel)",
+                    type=["pdf", "jpg", "jpeg", "png"],
+                    key=f"reply_file_{comment['id']}",
+                )
                 if st.form_submit_button("Envoyer"):
-                    if reply_msg.strip():
+                    if reply_msg.strip() or reply_file is not None:
+                        file_url = None
+                        if reply_file is not None:
+                            with st.spinner("Envoi du fichier..."):
+                                file_url = storage.upload_file(reply_file.getvalue(), reply_file.name)
                         conn.execute(
-                            "INSERT INTO commentaires (sujet_id, user_id, message, parent_id) VALUES (?, ?, ?, ?)",
-                            (sujet_id, st.session_state.user["id"], reply_msg.strip(), comment["id"]),
+                            "INSERT INTO commentaires (sujet_id, user_id, message, parent_id, fichier) VALUES (?, ?, ?, ?, ?)",
+                            (sujet_id, st.session_state.user["id"], reply_msg.strip(), comment["id"], file_url),
                         )
                         conn.commit()
                         st.session_state[reply_open_key] = False
                         st.rerun()
                     else:
-                        st.error("La réponse ne peut pas être vide.")
+                        st.error("Ajoutez un message ou un fichier.")
 
     for child in by_parent.get(comment["id"], []):
         render_comment(conn, child, by_parent, sujet_id, depth + 1)
@@ -255,16 +280,25 @@ with col_mid:
                     st.markdown("**Ajouter un commentaire**")
                     with st.form(key=f"comment_form_{s['id']}", clear_on_submit=True):
                         msg = st.text_area("Ajouter un commentaire", key=f"msg_{s['id']}", label_visibility="collapsed", placeholder="Votre commentaire...")
+                        comment_file = st.file_uploader(
+                            "Fichier (PDF, JPG ou PNG — optionnel)",
+                            type=["pdf", "jpg", "jpeg", "png"],
+                            key=f"comment_file_{s['id']}",
+                        )
                         submitted = st.form_submit_button("Envoyer")
                         if submitted:
-                            if msg.strip():
+                            if msg.strip() or comment_file is not None:
+                                file_url = None
+                                if comment_file is not None:
+                                    with st.spinner("Envoi du fichier..."):
+                                        file_url = storage.upload_file(comment_file.getvalue(), comment_file.name)
                                 conn.execute(
-                                    "INSERT INTO commentaires (sujet_id, user_id, message, parent_id) VALUES (?, ?, ?, NULL)",
-                                    (s["id"], st.session_state.user["id"], msg.strip()),
+                                    "INSERT INTO commentaires (sujet_id, user_id, message, parent_id, fichier) VALUES (?, ?, ?, NULL, ?)",
+                                    (s["id"], st.session_state.user["id"], msg.strip(), file_url),
                                 )
                                 conn.commit()
                                 st.rerun()
                             else:
-                                st.error("Le commentaire ne peut pas être vide.")
+                                st.error("Ajoutez un message ou un fichier.")
                 else:
                     st.caption("Connectez-vous pour laisser un commentaire.")

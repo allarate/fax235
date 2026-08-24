@@ -138,6 +138,9 @@ def init_db():
     if "parent_id" not in comment_columns:
         conn.execute("ALTER TABLE commentaires ADD COLUMN parent_id INTEGER REFERENCES commentaires(id) ON DELETE CASCADE")
         conn.commit()
+    if "fichier" not in comment_columns:
+        conn.execute("ALTER TABLE commentaires ADD COLUMN fichier TEXT")
+        conn.commit()
 
     admin_exists = conn.execute(
         "SELECT 1 FROM users WHERE role = 'admin' LIMIT 1"
