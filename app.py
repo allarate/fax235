@@ -128,12 +128,6 @@ st.markdown(
         flex: 0 0 auto !important;
         min-width: 0 !important;
     }
-    div[class*="st-key-header_left"] img {
-        border-radius: 50%;
-        object-fit: cover;
-        aspect-ratio: 1 / 1;
-        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
-    }
     div[class*="st-key-menu_toggle"] button {
         background: transparent !important;
         border: none !important;
@@ -356,12 +350,12 @@ else:
             div[class*="st-key-header_right"] {
                 align-items: flex-start !important;
             }
-            div[class*="st-key-header_left"] [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(-n+2) {
+            div[class*="st-key-header_left"] [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(1) {
                 width: auto !important;
                 max-width: max-content !important;
                 flex: 0 0 auto !important;
             }
-            div[class*="st-key-header_left"] [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(n+3) {
+            div[class*="st-key-header_left"] [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(n+2) {
                 flex: 1 1 100% !important;
                 max-width: 100% !important;
                 width: 100% !important;
@@ -399,12 +393,10 @@ else:
         with left_area:
             with st.container(key="header_left"):
                 n_nav_visible = n_nav if st.session_state.nav_expanded else 0
-                left_widths = [0.5, 2.2] + [1.9] * n_nav_visible
+                left_widths = [2.2] + [1.9] * n_nav_visible
                 left_cols = st.columns(left_widths, vertical_alignment="center")
 
                 with left_cols[0]:
-                    st.image("assets/fax235_logo.png", width=88)
-                with left_cols[1]:
                     with st.container(key="menu_toggle"):
                         if st.button("☰", key="menu_toggle_btn"):
                             st.session_state.nav_expanded = not st.session_state.nav_expanded
@@ -412,7 +404,7 @@ else:
 
                 if st.session_state.nav_expanded:
                     for i, page in enumerate(pages):
-                        with left_cols[2 + i]:
+                        with left_cols[1 + i]:
                             st.page_link(page)
 
         u = st.session_state.user
