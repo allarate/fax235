@@ -362,19 +362,22 @@ else:
                 flex: 0 0 auto !important;
             }
             div[class*="st-key-header_left"] [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(n+3) {
-                flex: 1 1 46% !important;
-                max-width: 48% !important;
-                width: auto !important;
+                flex: 1 1 100% !important;
+                max-width: 100% !important;
+                width: 100% !important;
                 min-width: 0 !important;
             }
             div[class*="st-key-header_left"] [data-testid="stPageLink"] {
-                padding: 0.4rem 0.5rem !important;
+                padding: 0.4rem 0.75rem !important;
                 justify-content: center !important;
+                min-height: 0 !important;
             }
             div[class*="st-key-header_left"] [data-testid="stPageLink"] p {
-                white-space: normal !important;
+                white-space: nowrap !important;
                 text-align: center;
-                font-size: 0.78rem !important;
+                font-size: 0.8rem !important;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
         </style>
