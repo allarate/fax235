@@ -135,14 +135,17 @@ def render_comment(conn, comment, by_parent: dict, sujet_id: int, depth: int = 0
 
         if st.session_state.get(reply_open_key, False):
             with st.form(key=f"reply_form_{comment['id']}", clear_on_submit=True):
-                reply_msg = st.text_area(
-                    "Réponse", key=f"reply_msg_{comment['id']}", label_visibility="collapsed", placeholder="Votre réponse..."
-                )
-                reply_file = st.file_uploader(
-                    "Fichier (PDF, JPG ou PNG — optionnel)",
-                    type=["pdf", "jpg", "jpeg", "png"],
-                    key=f"reply_file_{comment['id']}",
-                )
+                reply_msg_col, reply_file_col = st.columns([2, 1])
+                with reply_msg_col:
+                    reply_msg = st.text_area(
+                        "Réponse", key=f"reply_msg_{comment['id']}", label_visibility="collapsed", placeholder="Votre réponse..."
+                    )
+                with reply_file_col:
+                    reply_file = st.file_uploader(
+                        "Fichier (optionnel)",
+                        type=["pdf", "jpg", "jpeg", "png"],
+                        key=f"reply_file_{comment['id']}",
+                    )
                 if st.form_submit_button("Envoyer"):
                     if reply_msg.strip() or reply_file is not None:
                         file_url = None
@@ -279,12 +282,15 @@ with col_mid:
                 if st.session_state.user:
                     st.markdown("**Ajouter un commentaire**")
                     with st.form(key=f"comment_form_{s['id']}", clear_on_submit=True):
-                        msg = st.text_area("Ajouter un commentaire", key=f"msg_{s['id']}", label_visibility="collapsed", placeholder="Votre commentaire...")
-                        comment_file = st.file_uploader(
-                            "Fichier (PDF, JPG ou PNG — optionnel)",
-                            type=["pdf", "jpg", "jpeg", "png"],
-                            key=f"comment_file_{s['id']}",
-                        )
+                        msg_col, file_col = st.columns([2, 1])
+                        with msg_col:
+                            msg = st.text_area("Ajouter un commentaire", key=f"msg_{s['id']}", label_visibility="collapsed", placeholder="Votre commentaire...")
+                        with file_col:
+                            comment_file = st.file_uploader(
+                                "Fichier (optionnel)",
+                                type=["pdf", "jpg", "jpeg", "png"],
+                                key=f"comment_file_{s['id']}",
+                            )
                         submitted = st.form_submit_button("Envoyer")
                         if submitted:
                             if msg.strip() or comment_file is not None:

@@ -347,9 +347,6 @@ else:
                 max-width: max-content !important;
                 flex: 0 1 auto !important;
             }
-            div[class*="st-key-header_right"] {
-                align-items: flex-start !important;
-            }
             div[class*="st-key-header_left"] [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(1) {
                 width: auto !important;
                 max-width: max-content !important;
