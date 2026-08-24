@@ -125,6 +125,13 @@ def init_db():
             created_at TEXT NOT NULL DEFAULT (datetime('now')),
             UNIQUE(target_type, target_id, user_id, emoji)
         );
+
+        CREATE TABLE IF NOT EXISTS sessions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            token TEXT NOT NULL UNIQUE,
+            user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+            created_at TEXT NOT NULL DEFAULT (datetime('now'))
+        );
         """
     )
     conn.commit()

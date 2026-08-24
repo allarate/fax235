@@ -340,6 +340,16 @@ def render_marquee():
 if "user" not in st.session_state:
     st.session_state.user = None
 
+if st.session_state.user is None:
+    token = st.query_params.get("token")
+    if token:
+        session_row = db.get_connection().execute(
+            "SELECT u.* FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.token = ?",
+            (token,),
+        ).fetchone()
+        if session_row:
+            st.session_state.user = dict(session_row)
+
 login_page = st.Page("views/login.py", title="Connexion")
 
 if st.session_state.user is None:
@@ -501,6 +511,11 @@ else:
                         st.write(f"**{u['firstname']} {u['lastname']}**")
 
                 if st.button("Se déconnecter"):
+                    token = st.query_params.get("token")
+                    if token:
+                        db.get_connection().execute("DELETE FROM sessions WHERE token = ?", (token,))
+                        db.get_connection().commit()
+                    st.query_params.clear()
                     st.session_state.user = None
                     st.session_state.force_login_redirect = True
                     st.rerun()

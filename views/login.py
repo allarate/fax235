@@ -1,5 +1,7 @@
 """Connexion à l'espace étudiant."""
 
+import secrets
+
 import streamlit as st
 
 import auth
@@ -27,7 +29,11 @@ with st.container(key="auth_card"):
                 "SELECT * FROM users WHERE matricule = ?", (matricule.strip().upper(),)
             ).fetchone()
             if user and auth.verify_password(password, user["password_hash"]):
+                token = secrets.token_urlsafe(32)
+                conn.execute("INSERT INTO sessions (token, user_id) VALUES (?, ?)", (token, user["id"]))
+                conn.commit()
                 st.session_state.user = dict(user)
+                st.query_params["token"] = token
                 st.rerun()
             else:
                 st.error("Matricule ou mot de passe incorrect.")
