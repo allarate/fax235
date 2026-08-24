@@ -3,8 +3,8 @@
 import base64
 import time
 
+import extra_streamlit_components as stx
 import streamlit as st
-from streamlit_cookies_controller import CookieController
 
 import db
 import storage
@@ -12,28 +12,28 @@ import storage
 st.set_page_config(page_title="Fax235", layout="wide")
 db.init_db()
 
-cookie_controller = CookieController()
+cookie_manager = stx.CookieManager(key="fax235_cookie_manager")
 
 
 def safe_cookie_get(name: str):
-    """Le composant peut renvoyer un état interne invalide avant que le
-    navigateur n'ait répondu ; on traite alors le cookie comme absent."""
+    """Le composant peut ne pas encore avoir répondu depuis le navigateur ;
+    on traite alors le cookie comme absent plutôt que de planter."""
     try:
-        return cookie_controller.get(name)
+        return cookie_manager.get(name)
     except Exception:
         return None
 
 
 def safe_cookie_set(name: str, value: str, **kwargs):
     try:
-        cookie_controller.set(name, value, **kwargs)
+        cookie_manager.set(name, value, key=f"set_{name}", **kwargs)
     except Exception:
         pass
 
 
 def safe_cookie_remove(name: str):
     try:
-        cookie_controller.remove(name)
+        cookie_manager.delete(name, key=f"delete_{name}")
     except Exception:
         pass
 
