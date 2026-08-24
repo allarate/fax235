@@ -50,7 +50,7 @@ if st.session_state.get("pending_cookie_removal"):
     st.session_state.pop("pending_cookie_removal")
     # Laisse le composant transmettre la suppression au navigateur avant
     # qu'un st.switch_page / st.rerun ultérieur dans ce même run ne l'interrompe.
-    time.sleep(0.2)
+    time.sleep(0.8)
 
 st.markdown(
     """
