@@ -1,10 +1,24 @@
 """Espace administrateur : modération des documents et gestion des utilisateurs."""
 
+import time
+
 import streamlit as st
 
 from db import get_connection
 
-if not st.session_state.user or st.session_state.user["role"] != "admin":
+if not st.session_state.user:
+    attempts = st.session_state.get("_admin_guard_attempts", 0)
+    if attempts < 8:
+        st.session_state["_admin_guard_attempts"] = attempts + 1
+        st.info("Chargement...")
+        time.sleep(0.4)
+        st.rerun()
+    st.error("Accès réservé aux administrateurs.")
+    st.stop()
+else:
+    st.session_state.pop("_admin_guard_attempts", None)
+
+if st.session_state.user["role"] != "admin":
     st.error("Accès réservé aux administrateurs.")
     st.stop()
 

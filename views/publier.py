@@ -1,13 +1,23 @@
 """Dépôt d'un sujet ou d'une correction par un étudiant connecté."""
 
+import time
+
 import streamlit as st
 
 import storage
 from db import get_connection
 
 if not st.session_state.user:
+    attempts = st.session_state.get("_publier_guard_attempts", 0)
+    if attempts < 8:
+        st.session_state["_publier_guard_attempts"] = attempts + 1
+        st.info("Chargement...")
+        time.sleep(0.4)
+        st.rerun()
     st.warning("Vous devez être connecté pour publier un document.")
     st.stop()
+else:
+    st.session_state.pop("_publier_guard_attempts", None)
 
 conn = get_connection()
 
