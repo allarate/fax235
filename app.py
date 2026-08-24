@@ -297,6 +297,7 @@ st.markdown(
         bottom: 0;
         min-height: 96px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -304,6 +305,14 @@ st.markdown(
     div[class*="st-key-site_footer"] p {
         text-align: center;
         width: 100%;
+    }
+    div[class*="st-key-site_footer"] .footer_motto {
+        width: 100%;
+        text-align: center;
+        color: #7A1F2B;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        margin-bottom: 0.25rem;
     }
     div[class*="st-key-auth_card"] {
         min-height: 15vh;
@@ -578,4 +587,8 @@ else:
 
     st.divider()
     with st.container(key="site_footer"):
+        st.markdown(
+            "<div class='footer_motto'>Apprends · Partage · Avance</div>",
+            unsafe_allow_html=True,
+        )
         st.caption("© 2026 Fax235 · Au service de tous")
