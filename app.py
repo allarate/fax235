@@ -14,15 +14,39 @@ db.init_db()
 
 cookie_controller = CookieController()
 
+
+def safe_cookie_get(name: str):
+    """Le composant peut renvoyer un état interne invalide avant que le
+    navigateur n'ait répondu ; on traite alors le cookie comme absent."""
+    try:
+        return cookie_controller.get(name)
+    except Exception:
+        return None
+
+
+def safe_cookie_set(name: str, value: str, **kwargs):
+    try:
+        cookie_controller.set(name, value, **kwargs)
+    except Exception:
+        pass
+
+
+def safe_cookie_remove(name: str):
+    try:
+        cookie_controller.remove(name)
+    except Exception:
+        pass
+
+
 if st.session_state.get("pending_cookie_token"):
-    cookie_controller.set(
+    safe_cookie_set(
         "fax235_session",
         st.session_state.pop("pending_cookie_token"),
         max_age=30 * 24 * 3600,
     )
 
 if st.session_state.get("pending_cookie_removal"):
-    cookie_controller.remove("fax235_session")
+    safe_cookie_remove("fax235_session")
     st.session_state.pop("pending_cookie_removal")
     # Laisse le composant transmettre la suppression au navigateur avant
     # qu'un st.switch_page / st.rerun ultérieur dans ce même run ne l'interrompe.
@@ -359,7 +383,7 @@ if "user" not in st.session_state:
     st.session_state.user = None
 
 if st.session_state.user is None:
-    cookie_token = cookie_controller.get("fax235_session")
+    cookie_token = safe_cookie_get("fax235_session")
     if cookie_token:
         session_row = db.get_connection().execute(
             "SELECT u.* FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.token = ?",
