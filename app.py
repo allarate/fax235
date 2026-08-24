@@ -271,7 +271,7 @@ st.markdown(
     }
     div[class*="st-key-site_footer"] {
         bottom: 0;
-        min-height: 72px;
+        min-height: 96px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -373,12 +373,18 @@ login_page = st.Page("views/login.py", title="Connexion")
 
 if st.session_state.user is None:
     # Pas de connexion : aucun header, footer ni sidebar — uniquement la page en cours.
+    # publier.py et admin.py sont inclus même ici (avec leur propre garde d'accès) car
+    # le cookie de session n'est parfois lu par Streamlit qu'après ce premier run : sans
+    # ces entrées, un accès direct à /publier ou /admin depuis un compte déjà connecté
+    # tomberait sur une erreur "Page not found" le temps que le cookie soit récupéré.
     pages = [
         login_page,
         st.Page("views/register.py", title="Inscription"),
         st.Page("views/reset_password.py", title="Mot de passe oublié"),
         st.Page("views/sujets.py", title="Sujets & corrections"),
         st.Page("views/recherche.py", title="Recherche"),
+        st.Page("views/publier.py", title="Envoyer un sujet/correction"),
+        st.Page("views/admin.py", title="Administration"),
     ]
     pg = st.navigation(pages, position="hidden")
     if st.session_state.pop("force_login_redirect", False):
@@ -403,7 +409,7 @@ else:
         }
         section[data-testid="stMain"] .stMainBlockContainer {
             padding-top: 13rem;
-            padding-bottom: 5rem;
+            padding-bottom: 6.5rem;
         }
         @media (max-width: 640px) {
             div[class*="st-key-site_header"], div[class*="st-key-site_footer"] {
