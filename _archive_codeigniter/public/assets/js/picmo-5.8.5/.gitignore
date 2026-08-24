@@ -1,9 +1,0 @@
-.DS_Store
-node_modules
-dist
-coverage
-release
-.parcel-cache
-
-# Local Netlify folder
-.netlify
