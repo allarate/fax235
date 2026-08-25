@@ -74,13 +74,22 @@ class Connection:
             self._conn.commit()
 
 
-@st.cache_resource
+_thread_local = threading.local()
+
+
 def get_connection():
-    url = st.secrets["TURSO_DATABASE_URL"].replace("libsql://", "https://")
-    token = st.secrets["TURSO_AUTH_TOKEN"]
-    native_conn = libsql.connect(url, auth_token=token)
-    conn = Connection(native_conn)
-    conn.execute("PRAGMA foreign_keys = ON")
+    """Une connexion Turso par thread : Streamlit exécute chaque session sur son
+    propre thread, et le client natif libsql n'est pas garanti thread-safe pour un
+    partage global (une connexion unique en cache_resource provoquait des crashs
+    aléatoires sous accès concurrents)."""
+    conn = getattr(_thread_local, "conn", None)
+    if conn is None:
+        url = st.secrets["TURSO_DATABASE_URL"].replace("libsql://", "https://")
+        token = st.secrets["TURSO_AUTH_TOKEN"]
+        native_conn = libsql.connect(url, auth_token=token)
+        conn = Connection(native_conn)
+        conn.execute("PRAGMA foreign_keys = ON")
+        _thread_local.conn = conn
     return conn
 
 
