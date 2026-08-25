@@ -1,11 +1,14 @@
 """Accès base de données Turso (libSQL) pour Fax235."""
 
+import threading
 from pathlib import Path
 
 import libsql
 import streamlit as st
 
 import auth
+
+_DB_LOCK = threading.Lock()
 
 BASE_DIR = Path(__file__).resolve().parent
 UPLOAD_DIR = BASE_DIR / "uploads"
@@ -59,13 +62,16 @@ class Connection:
         self._conn = native_conn
 
     def execute(self, sql, params=None):
-        return Cursor(self._conn.execute(sql, list(params) if params else []))
+        with _DB_LOCK:
+            return Cursor(self._conn.execute(sql, list(params) if params else []))
 
     def executescript(self, script):
-        self._conn.executescript(script)
+        with _DB_LOCK:
+            self._conn.executescript(script)
 
     def commit(self):
-        self._conn.commit()
+        with _DB_LOCK:
+            self._conn.commit()
 
 
 @st.cache_resource
